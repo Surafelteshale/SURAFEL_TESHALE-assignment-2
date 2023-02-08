@@ -22,12 +22,12 @@ class HomePage extends StatelessWidget {
                         blurRadius: 8
                     ),
                   ],
-                  gradient: const LinearGradient(
+                  gradient: LinearGradient(
                     begin: Alignment.topRight,
                     end: Alignment.bottomLeft,
                     colors: [
                       Color(0xff165967),
-                      Color(0xff23aea6),
+                      Colors.cyan.shade100,
                     ],
                   )
               ),
@@ -84,7 +84,7 @@ class HomePage extends StatelessWidget {
                               width: 250,
                               child: TextFormField(
                                 decoration: InputDecoration(
-                                  hintText: 'Anything you want?',
+                                  hintText: 'search',
                                   border: InputBorder.none,
                                 ),
                               ),
@@ -122,56 +122,37 @@ class HomePage extends StatelessWidget {
             ),
           ),
         ),
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.black,
-        unselectedItemColor: Colors.white,
-        selectedItemColor: Color(0xfffac585),
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'search',
-          ),
-          BottomNavigationBarItem(
-              icon: Icon(Icons.category_rounded),
-              label: ('category')
-          ),
-        ],
-      ),
-        // bottomNavigationBar: Stack(
-        //   children:[ Container(
-        //     decoration: BoxDecoration(
-        //         borderRadius: BorderRadius.circular(10),
-        //         boxShadow: [
-        //           BoxShadow(
-        //               color: Colors.grey.withOpacity(0.5),
-        //               spreadRadius: 1,
-        //               blurRadius: 8
-        //           ),
-        //         ],
-        //         gradient: const LinearGradient(
-        //           begin: Alignment.topRight,
-        //           end: Alignment.bottomLeft,
-        //           colors: [
-        //             Color(0xff165967),
-        //             Color(0xff23aea6),
-        //           ],
-        //         )
-        //     ),
-        //     child: NavigationBar(
-        //       backgroundColor: Colors.transparent,
-        //       destinations: const [
-        //         NavigationDestination(icon: Icon(Icons.home,color: Color(0xfffac585),),label: 'Home',),
-        //         NavigationDestination(icon: Icon(Icons.location_on_sharp,color: Colors.white,),label: '',),
-        //         NavigationDestination(icon: Icon(Icons.search,color: Colors.white,),label: '',),
-        //         NavigationDestination(icon: Icon(Icons.person,color: Colors.white,),label: '',),
-        //       ],
-        //     ),
-        //   ),]
-        // ),
+        bottomNavigationBar: Stack(
+          children:[ Container(
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10),
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.grey.withOpacity(0.5),
+                      spreadRadius: 1,
+                      blurRadius: 8
+                  ),
+                ],
+                gradient: const LinearGradient(
+                  begin: Alignment.topRight,
+                  end: Alignment.bottomLeft,
+                  colors: [
+                    Color(0xff165967),
+                    Color(0xff23aea6),
+                  ],
+                )
+            ),
+            child: NavigationBar(
+              backgroundColor: Colors.transparent,
+              destinations: const [
+                NavigationDestination(icon: Icon(Icons.home,color: Color(0xfffac585),),label: 'Home',),
+                NavigationDestination(icon: Icon(Icons.location_on_sharp,color: Colors.white,),label: '',),
+                NavigationDestination(icon: Icon(Icons.search,color: Colors.white,),label: '',),
+                NavigationDestination(icon: Icon(Icons.person,color: Colors.white,),label: '',),
+              ],
+            ),
+          ),]
+        ),
     );
   }
 }
