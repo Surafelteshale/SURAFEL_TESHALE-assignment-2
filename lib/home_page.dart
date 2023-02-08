@@ -70,6 +70,7 @@ class HomePage extends StatelessWidget {
                         margin: EdgeInsets.only(left: 15,right: 15,top: 0,bottom: 5),
                         padding: EdgeInsets.symmetric(horizontal: 15),
                         height: 50,
+                        width: 500,
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20),
                           color: Colors.white,
