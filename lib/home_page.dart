@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
                     end: Alignment.bottomLeft,
                     colors: [
                       Color(0xff165967),
-                      Colors.cyan.shade100,
+                      Colors.cyan.shade50,
                     ],
                   )
               ),
